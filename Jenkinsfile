@@ -26,7 +26,7 @@ pipeline {
       steps {
         script {
 		  rtMaven.tool = 'Maven'
-		  rtMaven.resolver releaseRepo: 'maven', snapshotRepo: 'maven', server: server
+		  //rtMaven.resolver releaseRepo: 'maven', snapshotRepo: 'maven', server: server
 		  buildInfo = Artifactory.newBuildInfo()
 		  rtMaven.deployer releaseRepo: 'mvn-dh-release', snapshotRepo: 'mvn-dh-snapshot', server: server
           buildInfo.env.capture = true
